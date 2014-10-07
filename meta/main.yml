@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Antti J. Salminen
-  description:
+  description: Manages /etc/hosts and /etc/hostname with templates.
   company: Libraries.fi / Helsinki city library
   license:
     - BSD
@@ -25,14 +25,14 @@ galaxy_info:
       - 18
       - 19
       - 20
-    - name: opensuse
-      versions:
-        - all
-        - 12.1
-        - 12.2
-        - 12.3
-        - 13.1
-        - 13.2
+  - name: opensuse
+    versions:
+      - all
+      - 12.1
+      - 12.2
+      - 12.3
+      - 13.1
+      - 13.2
   - name: Amazon
     versions:
       - all
@@ -86,9 +86,8 @@ galaxy_info:
       - lenny
       - squeeze
       - wheezy
-
   categories:
-  - networking
-  - system
+    - networking
+    - system
 
 dependencies: []
