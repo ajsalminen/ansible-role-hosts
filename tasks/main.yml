@@ -1,0 +1,5 @@
+---
+# tasks file for hosts
+
+- include: hostname.yml
+- include: hosts.yml

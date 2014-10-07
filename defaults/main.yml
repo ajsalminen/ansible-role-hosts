@@ -1,0 +1,21 @@
+---
+# defaults file for hosts
+hosts_ipv4_loopback_hosts:
+  address: 127.0.0.1
+  hostnames:
+    - localhost.localdomain
+    - localhost
+
+hosts_default_ipv4_hosts:
+  address: "{{ ansible_default_ipv4.address }}"
+  hostnames:
+    - "{{ inventory_hostname }}"
+    - "{{inventory_hostname_short }}"
+
+hosts_default_hosts:
+  - "{{ hosts_ipv4_loopback_hosts }}"
+  - "{{ hosts_default_ipv4_hosts }}"
+
+hosts_additional_hosts: []
+
+hosts_all_hosts: "{{ hosts_default_hosts|union(hosts_additional_hosts) }}"

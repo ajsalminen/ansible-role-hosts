@@ -1,0 +1,15 @@
+---
+
+- name: Set up /etc/hostname.
+  template:
+    src: {{item}}
+    dest: /etc/hostname
+    owner: root
+    group: root
+    mode: 0644
+  with_first_found:
+    - files:
+        - "{{ 'hostname_' + inventory_hostname + '.j2' }}"
+        - hostname.j2
+      paths:
+        - ../templates
