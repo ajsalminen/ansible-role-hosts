@@ -5,39 +5,40 @@ galaxy_info:
   company: Libraries.fi / Helsinki city library
   license: MIT
   min_ansible_version: 1.5
-  - name: EL
-    versions:
-      - all
-  - name: GenericUNIX
-    versions:
-      - all
-  - name: Fedora
-    versions:
-      - all
-  - name: opensuse
-    versions:
-      - all
-  - name: Amazon
-    versions:
-      - all
-  - name: GenericBSD
-    versions:
-      - all
-  - name: FreeBSD
-    versions:
-     - all
-  - name: Ubuntu
-    versions:
-      - all
-  - name: SLES
-    versions:
-      - all
-  - name: GenericLinux
-    versions:
-      - all
-  - name: Debian
-    versions:
-      - all
+  platforms:
+    - name: EL
+      versions:
+        - all
+    - name: GenericUNIX
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+    - name: opensuse
+      versions:
+        - all
+    - name: Amazon
+      versions:
+        - all
+    - name: GenericBSD
+      versions:
+        - all
+    - name: FreeBSD
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+    - name: SLES
+      versions:
+        - all
+    - name: GenericLinux
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
   categories:
     - networking
     - system
