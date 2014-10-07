@@ -1,4 +1,4 @@
-Role Name
+Hosts
 =========
 
 This role manages /etc/hosts and /etc/hostname. The files are managed with a
