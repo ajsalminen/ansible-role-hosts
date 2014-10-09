@@ -2,7 +2,7 @@
 
 - name: Set up /etc/hostname.
   template:
-    src: {{item}}
+    src: "{{item}}"
     dest: /etc/hostname
     owner: root
     group: root
