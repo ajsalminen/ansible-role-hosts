@@ -5,7 +5,7 @@
     src: "{{item}}"
     dest: /etc/hostname
     owner: root
-    group: root
+    group: "{{ hosts_file_group }}"
     mode: 0644
   with_first_found:
     - files:
