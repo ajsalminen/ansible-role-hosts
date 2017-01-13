@@ -13,3 +13,4 @@
         - hostname.j2
       paths:
         - ../templates
+  become: true
