@@ -29,6 +29,10 @@ Empty by default.
 hosts_all_hosts: List of all host entries. Just merges hosts_default_hosts and
 hosts_additional_hosts by default.
 
+hosts_hostname: The hostname that  will be given to the remote target (ie the
+contents of /etc/hostname). If left empty, it defaults to
+`inventory_hostname_short`.
+
 Example Playbook
 ----------------
 
