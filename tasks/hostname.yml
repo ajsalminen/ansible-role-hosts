@@ -1,15 +1,11 @@
 ---
 
 - name: Set up /etc/hostname.
-  template:
-    src: "{{item}}"
-    dest: /etc/hostname
+  hostname:
+    name: "{{ hosts_hostname | default(inventory_hostname_short, true) }}"
+
+- name: Set group on /etc/hostname
+  file:
+    path: /etc/hostname
     owner: root
     group: "{{ hosts_file_group }}"
-    mode: 0644
-  with_first_found:
-    - files:
-        - "{{ 'hostname_' + inventory_hostname + '.j2' }}"
-        - hostname.j2
-      paths:
-        - ../templates
