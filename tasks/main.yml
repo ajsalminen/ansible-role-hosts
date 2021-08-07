@@ -3,7 +3,7 @@
 
 - name: Include OS-specific variables.
   include_vars: "{{ ansible_os_family }}.yml"
-  when: ansible_os_family == 'FreeBSD'
+  when: (ansible_os_family == 'FreeBSD' or ansible_os_family == 'Darwin')
 
 - include: hostname.yml
 - include: hosts.yml
