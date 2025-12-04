@@ -5,5 +5,5 @@
   include_vars: "{{ ansible_os_family }}.yml"
   when: ansible_os_family == 'FreeBSD'
 
-- include: hostname.yml
-- include: hosts.yml
+- include_tasks: hostname.yml
+- include_tasks: hosts.yml
